@@ -1,0 +1,6 @@
+export DIST_NAME=PleromaPi
+export DIST_VERSION=0.1.0
+export MODULES="base(network,docker,pleromapi,usage-statistics)"
+
+
+export USAGE_STATISTICS_URL=https://pleromapi-tracking.gnethomelinux.com
