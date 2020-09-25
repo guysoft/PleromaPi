@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Starting setup for docker"
+
+NETWORK_NAME=nginx-proxy
+if [ -z $(docker network ls --filter name=^${NETWORK_NAME}$ --format="{{ .Name }}") ] ; then 
+     echo "creating network ${NETWORK_NAME}"
+     docker network create ${NETWORK_NAME} ; 
+fi
+
+echo "Done"

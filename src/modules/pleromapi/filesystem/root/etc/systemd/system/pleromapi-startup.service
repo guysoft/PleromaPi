@@ -1,0 +1,13 @@
+[Unit]
+Description=Service to set stuff up
+Requires=docker.service network-online.target
+After=docker.service network-online.target
+
+[Service]
+#Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/pleromapi-startup
+
+[Install]
+WantedBy=multi-user.target docker-compose.service
+

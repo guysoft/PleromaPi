@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# PleromaPi module
+# <Description what this module does>
+# Written by Guy Sheffer <guysoft at gmail dot com>
+# GPL V3
+########
+
+
+# Source error handling, leave this in place
+set -x
+set -e
+
+source /common.sh
+install_cleanup_trap
+
+unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
+unpack /filesystem/home/root /root root
+unpack /filesystem/boot /boot
+unpack /filesystem/root /
+
+apt-get update
+apt-get install -y git
+
+pushd /home/pi
+    gitclone PLEROMAPI_PLEROMA_DOCKER_COMPOSE_REPO pleroma-docker-compose
+    mv pleroma-docker-compose /boot/docker-compose/02_pleroma
+popd
+# pushd /filesystem/boot/docker-compose
+#     gitclone PLEROMAPI_PLEROMA_DOCKER_COMPOSE_REPO 02_pleroma
+# popd
+
+systemctl enable pleromapi-startup.service
+
+#cleanup
+apt-get clean
+apt-get autoremove -y
