@@ -1,7 +1,7 @@
 PleromaPi
 =========
 
-An out of the box `Raspberry Pi <http://www.raspberrypi.org/>`_ Raspbian distro that runs `_Pleroma <https://pleroma.social/>`_ using Docker and Nginx-proxy as a reverse proxy, with letsencrypt.
+An out of the box `Raspberry Pi <http://www.raspberrypi.org/>`_ Raspbian distro that runs `Pleroma <https://pleroma.social/>`_ using Docker and Nginx-proxy as a reverse proxy, with letsencrypt.
 
 
 Where to get it?
