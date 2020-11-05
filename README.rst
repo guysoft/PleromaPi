@@ -16,6 +16,8 @@ How to use it?
 #. Configure your WiFi by editing ``pleromapi-wpa-supplicant.txt`` at the root of the flashed card when using it like a flash drive
 #. Configure the Pleroma settings at ``/boot/docker-compose/pleroma/environments/pleroma/pleroma.env`` and set::
 
+    # fill in your specific data below
+    # otherwise you won't get an https certificate
     ADMIN_EMAIL=admin@ops.pleroma.social
     NOTIFY_EMAIL=pleroma+admin@ops.pleroma.social
     DOMAIN=pleroma.gnethomelinux.com
