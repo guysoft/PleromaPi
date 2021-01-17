@@ -2,6 +2,7 @@ PleromaPi
 =========
 
 An out of the box `Raspberry Pi <http://www.raspberrypi.org/>`_ Raspbian distro that runs `Pleroma <https://pleroma.social/>`_ using Docker and Nginx-proxy as a reverse proxy, with letsencrypt.
+It uses the `docker-compose yaml for pleroma here <https://git.pleroma.social/guysoft/pleroma-docker-compose/-/blob/devel/docker-compose.yml>`_.
 
 
 Where to get it?
