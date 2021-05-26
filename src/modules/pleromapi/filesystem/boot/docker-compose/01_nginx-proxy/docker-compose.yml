@@ -19,7 +19,7 @@ services:
     restart: always
 
   dockergen:
-    image: btcpayserver/docker-gen:0.7.6
+    image: btcpayserver/docker-gen:0.7.8
     container_name: nginx-proxy-gen
     depends_on:
       - nginx
@@ -34,7 +34,7 @@ services:
     restart: always
 
   letsencrypt:
-    image: duch/letsencrypt-nginx-proxy-companion:stable
+    image: nginxproxy/acme-companion
     container_name: nginx-proxy-le
     depends_on:
       - nginx

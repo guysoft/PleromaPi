@@ -2,6 +2,7 @@ PleromaPi
 =========
 
 An out of the box `Raspberry Pi <http://www.raspberrypi.org/>`_ Raspbian distro that runs `Pleroma <https://pleroma.social/>`_ using Docker and Nginx-proxy as a reverse proxy, with letsencrypt.
+It uses the `docker-compose yaml for pleroma here <https://git.pleroma.social/guysoft/pleroma-docker-compose/-/blob/devel/docker-compose.yml>`_.
 
 
 Where to get it?
@@ -16,6 +17,8 @@ How to use it?
 #. Configure your WiFi by editing ``pleromapi-wpa-supplicant.txt`` at the root of the flashed card when using it like a flash drive
 #. Configure the Pleroma settings at ``/boot/docker-compose/pleroma/environments/pleroma/pleroma.env`` and set::
 
+    # fill in your specific data below
+    # otherwise you won't get an https certificate
     ADMIN_EMAIL=admin@ops.pleroma.social
     NOTIFY_EMAIL=pleroma+admin@ops.pleroma.social
     DOMAIN=pleroma.gnethomelinux.com
