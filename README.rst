@@ -29,6 +29,7 @@ How to use it?
 #. Boot the Pi from the SD card
 #. Hostname is ``pleromapi`` (not ``raspberrypi`` as usual), username: ``pi`` and inital password is: ``raspberry``
 #. After a few mintues you should be able to access ``http://pleromapi.local/``
+#. Create an admin account on Pleroma by running the script on the Pi: ``/home/pi/scripts/make_admin_user``
 #. You can change the settings of the Pleroma/nginx-proxy stack in the files located at ``/boot/docker-compose/pleroma/`` and ``/boot/docker-compose/nginx-proxy/``.
 
 
