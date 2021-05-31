@@ -21,7 +21,7 @@ unpack /filesystem/root /
 apt-get update
 apt-get install -y git
 
-pushd /home/pi
+pushd /home/"${BASE_USER}"
     gitclone PLEROMAPI_PLEROMA_DOCKER_COMPOSE_REPO pleroma-docker-compose
     mv pleroma-docker-compose /boot/docker-compose/02_pleroma
 popd
