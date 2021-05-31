@@ -28,7 +28,7 @@ How to use it?
 
 #. Boot the Pi from the SD card
 #. Hostname is ``pleromapi`` (not ``raspberrypi`` as usual), username: ``ubuntu`` and inital password is: ``ubuntu``. You will be prompted to change it on login.
-#. After a few mintues you should be able to access ``https://pleromapi.local/`` or if you are using ipv6 `https://pleromapi/``. Note you have to use https because of how pleroma works.
+#. After a few mintues you should be able to access ``https://pleromapi.local/`` or if you are using ipv6 ``https://pleromapi/``. Note you have to use https because of how pleroma works.
 #. Create an admin account on Pleroma by running the script on the Pi: ``/home/pi/scripts/make_admin_user``
 #. You can change the settings of the Pleroma/nginx-proxy stack in the files located at ``/boot/docker-compose/pleroma/`` and ``/boot/docker-compose/nginx-proxy/``.
 
@@ -54,7 +54,7 @@ Requirements
 
 #. Docker or Vagrant, docker recommended
 #. Docker-compose - recommended if using docker build method, instructions assume you have it
-#. Downloaded `Raspberry Pi OS <https://downloads.raspberrypi.org/raspios_lite_armhf/images/>`_ image.
+#. Downloaded `Ubuntu for RaspeberryPi image <https://ubuntu.com/download/raspberry-pi/>`_ image. Official releases use the LTS version.
 #. Root privileges for chroot
 #. Bash
 #. sudo (the script itself calls it, running as root without sudo won't work)
