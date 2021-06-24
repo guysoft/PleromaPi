@@ -2,7 +2,7 @@ export DIST_NAME=PleromaPi
 export DIST_VERSION=0.3.0
 export BASE_DISTRO=ubuntu
 export BASE_ARCH=aarch64
-export MODULES="base(network,docker,pleromapi,usage-statistics)"
+export MODULES="base(network,docker,pleromapi,auto-mount-removable,usage-statistics)"
 export BASE_IMAGE_ENLARGEROOT=2000
 export BASE_IMAGE_RESIZEROOT=200
 
