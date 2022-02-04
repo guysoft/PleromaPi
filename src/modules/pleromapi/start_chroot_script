@@ -18,8 +18,8 @@ unpack /filesystem/home/root /root root
 unpack /filesystem/boot /boot
 unpack /filesystem/root /
 
-apt-get update
-apt-get install -y git
+apt-get install apt-transport-https ca-certificates -y
+update-ca-certificates
 
 pushd /home/"${BASE_USER}"
     gitclone PLEROMAPI_PLEROMA_DOCKER_COMPOSE_REPO pleroma-docker-compose
