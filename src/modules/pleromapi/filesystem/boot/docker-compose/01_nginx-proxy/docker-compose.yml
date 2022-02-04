@@ -20,7 +20,7 @@ services:
     restart: always
 
   dockergen:
-    image: btcpayserver/docker-gen:0.7.8
+    image: jwilder/docker-gen
     container_name: nginx-proxy-gen
     depends_on:
       - nginx
