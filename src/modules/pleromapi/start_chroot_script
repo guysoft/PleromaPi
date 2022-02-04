@@ -15,7 +15,7 @@ install_cleanup_trap
 
 unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
 unpack /filesystem/home/root /root root
-unpack /filesystem/boot /boot
+unpack /filesystem/boot /"${BASE_BOOT_MOUNT_PATH}"
 unpack /filesystem/root /
 
 apt-get install apt-transport-https ca-certificates -y
@@ -23,9 +23,9 @@ update-ca-certificates
 
 pushd /home/"${BASE_USER}"
     gitclone PLEROMAPI_PLEROMA_DOCKER_COMPOSE_REPO pleroma-docker-compose
-    mv pleroma-docker-compose /boot/docker-compose/02_pleroma
+    mv pleroma-docker-compose /"${BASE_BOOT_MOUNT_PATH}"/docker-compose/02_pleroma
 popd
-# pushd /filesystem/boot/docker-compose
+# pushd /filesystem/"${BASE_BOOT_MOUNT_PATH}"/docker-compose
 #     gitclone PLEROMAPI_PLEROMA_DOCKER_COMPOSE_REPO 02_pleroma
 # popd
 
