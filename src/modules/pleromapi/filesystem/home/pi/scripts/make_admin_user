@@ -3,5 +3,6 @@ read -p "Enter new admin username [admin]: " name
 name=${name:-admin}
 
 read -p "Enter new admin email (admin@example.com): " email
+email=${email:-admin@example.com}
 
 sudo docker exec pleroma /opt/pleroma/bin/pleroma_ctl user new "${name}" "${email}" --admin -y
