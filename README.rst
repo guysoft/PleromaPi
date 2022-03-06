@@ -28,7 +28,7 @@ How to use it?
 
 #. Boot the Pi from the SD card
 #. Hostname is ``pleromapi`` (not ``raspberrypi`` as usual), username: ``ubuntu`` and inital password is: ``ubuntu``. You will be prompted to change it on login.
-#. After a few minutes you should be able to access ``https://pleromapi.local/`` or if you are using ipv6 ``https://pleromapi/``. Note you have to use https because of how pleroma works.
+#. After a few minutes, Pleroma will only work on ``https://DOMAIN`` you provided above. Because it blocks non-https communication on the domain. You should be able to access ``https://pleromapi.local/`` or if you are using ipv6 ``https://pleromapi/`` for testing, but it will how up as blank or with an https error. Note you have to use https because of how pleroma works. 
 #. Create an admin account on Pleroma by running the script on the Pi: ``/home/pi/scripts/make_admin_user``
 #. You can change the settings of the Pleroma/nginx-proxy stack in the files located at ``/boot/docker-compose/pleroma/`` and ``/boot/docker-compose/nginx-proxy/``.
 
@@ -38,6 +38,7 @@ Requirements
 * A domain pointing to your Pi's IP.
 * 2A power supply
 * RaspberryPi 2, 3B, 3B+, 4B (not 1 and zero)
+* A domain, because you need an https valid certifiacte
 
 Features
 --------
@@ -69,7 +70,7 @@ You can build it assuming you already have docker and docker-compose installed i
     
     git clone https://github.com/guysoft/PleromaPi.git
     cd PleromaPi/src/image
-    wget -c --trust-server-names 'https://cdimage.ubuntu.com/releases/20.04.2/release/ubuntu-20.04.2-preinstalled-server-arm64+raspi.img.xz'
+    wget -c --trust-server-names 'https://cdimage.ubuntu.com/releases/20.04.2/release/ubuntu-20.04.4-preinstalled-server-arm64+raspi.img.xz'
     cd ..
     sudo docker-compose up -d
     sudo docker exec -it pleromapi-build build
