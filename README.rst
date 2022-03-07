@@ -7,8 +7,9 @@ It uses the `docker-compose yaml for pleroma here <https://git.pleroma.social/gu
 
 Where to get it?
 ----------------
+You can use the `pi-imager <https://github.com/guysoft/pi-imager/releases>`_ commuity raspberrypi imager here, unofficial section.
 
-Official mirror is `here <http://unofficialpi.org/Distros/PleromaPi>`_
+Or download directly form the official mirror `here <http://unofficialpi.org/Distros/PleromaPi>`_
 
 How to use it?
 --------------
