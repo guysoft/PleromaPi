@@ -65,7 +65,7 @@ Build PleromaPi
 
 PleromaPi can be built using docker running either on an intel or RaspberryPi (supported ones listed).
 Build requires about 4.5 GB of free space available.
-You can build it assuming you already have docker and docker-compose installed issuing the following commands::
+You can build it assuming you already have docker installed issuing the following commands::
 
     
     git clone https://github.com/guysoft/PleromaPi.git
