@@ -55,7 +55,6 @@ Requirements
 ~~~~~~~~~~~~
 
 #. Docker or Vagrant, docker recommended
-#. Docker-compose - recommended if using docker build method, instructions assume you have it
 #. Downloaded `Ubuntu for RaspeberryPi image <https://ubuntu.com/download/raspberry-pi/>`_ image. Official releases use the LTS version.
 #. Root privileges for chroot
 #. Bash
@@ -73,7 +72,7 @@ You can build it assuming you already have docker and docker-compose installed i
     cd PleromaPi/src/image
     wget -c --trust-server-names 'https://cdimage.ubuntu.com/releases/20.04.2/release/ubuntu-20.04.4-preinstalled-server-arm64+raspi.img.xz'
     cd ..
-    sudo docker-compose up -d
+    sudo docker compose up -d
     sudo docker exec -it pleromapi-build build
     
 Building PleromaPi Variants
