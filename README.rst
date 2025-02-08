@@ -55,7 +55,7 @@ Requirements
 ~~~~~~~~~~~~
 
 #. Docker or Vagrant, docker recommended
-#. Downloaded `Ubuntu for RaspeberryPi image <https://ubuntu.com/download/raspberry-pi/>`_ image. Official releases use the LTS version.
+#. Downloaded `Ubuntu for RaspberryPi image <https://ubuntu.com/download/raspberry-pi/>`_ image. Official releases use the LTS version.
 #. Root privileges for chroot
 #. Bash
 #. sudo (the script itself calls it, running as root without sudo won't work)
