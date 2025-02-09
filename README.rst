@@ -2,7 +2,7 @@ PleromaPi
 =========
 
 An out of the box `Raspberry Pi <http://www.raspberrypi.org/>`_ Raspbian distro that runs `Pleroma <https://pleroma.social/>`_ using Docker and Nginx-proxy as a reverse proxy, with letsencrypt.
-It uses the `docker-compose yaml for pleroma here <https://git.pleroma.social/guysoft/pleroma-docker-compose/-/blob/devel/docker-compose.yml>`_.
+It uses the `docker compose yaml for pleroma here <https://git.pleroma.social/guysoft/pleroma-docker-compose/-/blob/devel/docker-compose.yml>`_.
 
 
 Where to get it?
@@ -55,8 +55,7 @@ Requirements
 ~~~~~~~~~~~~
 
 #. Docker or Vagrant, docker recommended
-#. Docker-compose - recommended if using docker build method, instructions assume you have it
-#. Downloaded `Ubuntu for RaspeberryPi image <https://ubuntu.com/download/raspberry-pi/>`_ image. Official releases use the LTS version.
+#. Downloaded `Ubuntu for RaspberryPi image <https://ubuntu.com/download/raspberry-pi/>`_ image. Official releases use the LTS version.
 #. Root privileges for chroot
 #. Bash
 #. sudo (the script itself calls it, running as root without sudo won't work)
@@ -66,14 +65,14 @@ Build PleromaPi
 
 PleromaPi can be built using docker running either on an intel or RaspberryPi (supported ones listed).
 Build requires about 4.5 GB of free space available.
-You can build it assuming you already have docker and docker-compose installed issuing the following commands::
+You can build it assuming you already have docker installed issuing the following commands::
 
     
     git clone https://github.com/guysoft/PleromaPi.git
     cd PleromaPi/src/image
     wget -c --trust-server-names 'https://cdimage.ubuntu.com/releases/20.04.2/release/ubuntu-20.04.4-preinstalled-server-arm64+raspi.img.xz'
     cd ..
-    sudo docker-compose up -d
+    sudo docker compose up -d
     sudo docker exec -it pleromapi-build build
     
 Building PleromaPi Variants
